@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    
+    <!-- External Fonts and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Basic CSS Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .header-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .header-logo img {
+            width: 120px;
+        }
+
+        .main-menu ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-menu ul li {
+            position: relative;
+            padding: 10px 20px;
+        }
+
+        .main-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .main-menu ul li:hover a {
+            color: #f4d03f;
+        }
+
+        /* Dropdown Menu */
+        .main-menu ul li .sub-menu,
+        .main-menu ul li .mega-menu {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            top: 100%;
+            left: 0;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        .main-menu ul li:hover .sub-menu,
+        .main-menu ul li:hover .mega-menu {
+            display: block;
+        }
+
+        .sub-menu ul {
+            list-style: none;
+        }
+
+        .sub-menu li a,
+        .mega-menu li a {
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .sub-menu li a:hover,
+        .mega-menu li a:hover {
+            background-color: #555;
+        }
+
+        .mega-menu {
+            width: 600px;
+            display: flex;
+            padding: 15px;
+        }
+
+        .mega-menu ul {
+            margin-right: 20px;
+        }
+
+        .mega-menu .title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-action-btn {
+            color: #fff;
+            font-size: 18px;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .header-action-btn:hover {
+            color: #f4d03f;
+        }
+
+        /* Responsive Menu */
+        @media (max-width: 768px) {
+            .main-menu {
+                display: none;
+            }
+
+            .header-action-btn-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section Start -->
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-logo">
+                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="Site Logo"></a>
+                </div>
+
+                <!-- Main Navigation Start -->
+                <div class="main-menu">
+                    <ul>
+                        <li class="dropdown"><a href="#">Home <i class="fas fa-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="index.html">Home 1</a></li>
+                                <li><a href="index-2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="dropdown"><a href="#">Pages <i class="fas fa-angle-down"></i></a>
+                            <div class="mega-menu">
+                                <ul>
+                                    <li class="title"><a href="#">Inner Pages</a></li>
+                                    <li><a href="404.html">404 Page</a></li>
+                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="faq.html">Faq Page</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon Page</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title"><a href="#">Shop Pages</a></li>
+                                    <li><a href="cart.html">Cart Page</a></li>
+                                    <li><a href="checkout.html">Checkout Page</a></li>
+                                    <li><a href="compare.html">Compare Page</a></li>
+                                    <li><a href="wishlist.html">Wishlist Page</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="title"><a href="#">Account Pages</a></li>
+                                    <li><a href="my-account.html">My Account</a></li>
+                                    <li><a href="login.html">Login Page</a></li>
+                                    <li><a href="register.html">Register Page</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Main Navigation End -->
+
+                <!-- Header Actions Start -->
+                <div class="header-actions">
+                    <a href="#" class="header-action-btn"><i class="fas fa-search"></i></a>
+                    <a href="#" class="header-action-btn"><i class="fas fa-user"></i></a>
+                    <a href="#" class="header-action-btn"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="header-action-btn"><i class="fas fa-shopping-bag"></i></a>
+                    <a href="#" class="header-action-btn-menu"><i class="fas fa-bars"></i></a>
+                </div>
+                <!-- Header Actions End -->
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Main Content Start -->
+    <main>
+        <div class="container">
+            <h1>Welcome to My Website</h1>
+            <p>This is a sample content area. Customize it with your own content.</p>
+        </div>
+    </main>
+    <!-- Main Content End -->
+
+    <!-- Footer Section Start -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+</body>
+
+</html>
