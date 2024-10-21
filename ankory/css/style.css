@@ -7,108 +7,222 @@ header {
 	width: 100%;
 }
 .container {
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 }
 
-.header-main {
+/* .header-main {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
+} */
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
 }
-        .header-logo img {
-            width: 120px;
-        }
-		.main-menu ul {
-		    list-style: none;/* 去掉默认黑点样式 */
-		    display: flex;/* 行内布局 */
-		}
+
+@media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 960px;
+    }
+}
+
+.align-self-center {
+	align-self: center !important;
+	padding-inline: 10px;
+}
+
+.header-logo img {
+	width: 120px;
+}
+
+.main-menu {
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.main-menu ul {
+	list-style: none;/* 去掉默认黑点样式 */
+	display: flex;/* 行内布局 */
+	/* padding-inline: 20px; */
+}
+
+.main-menu ul li {
+	position: relative;
+	padding: 10px 15px;
+}
+
+.main-menu ul li a {
+	color: #4a4a4a;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.main-menu ul li:hover a {
+	color: #5eb1b9;
+}
+/* Dropdown Menu */
+.main-menu ul li .sub-menu,
+.main-menu ul li .mega-menu {
+	display: none;
+	position: absolute;
+	background-color: #ffffff;
+	top: 100%;
+	left: 0;
+	padding: 15px 0;
+	z-index: 1000;
+}
+.main-menu ul li:hover .sub-menu,
+.main-menu ul li:hover .mega-menu {
+	display: block;
+}
+
+.sub-menu ul {
+	list-style: none;
+}
+
+.sub-menu li a,
+.mega-menu li a {
+	color: #fff;
+	padding: 10px 20px;
+	display: block;
+}
+
+.sub-menu li a:hover,
+.mega-menu li a:hover {
+	background-color: #555;
+}
+
+.mega-menu {
+	width: 600px;
+	display: flex;
+	padding: 15px;
+}
+
+.mega-menu ul {
+	margin-right: 20px;
+}
+
+.mega-menu .title {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.header-actions {
+	display: flex;
+	align-items: center;
+}
+
+.header-action-btn {
+	color: #fff;
+	font-size: 18px;
+	margin-right: 15px;
+	text-decoration: none;
+}
+
+.header-action-btn:hover {
+	color: #f4d03f;
+}
+
+/* 搜索框容器 */
+.search-box {
+	display: flex; /* 使用 Flexbox 布局 */
+	align-items: center; /* 垂直居中对齐 */
+	border: 1px solid #ccc; /* 边框 */
+	padding: 5px; /* 内边距 */
+	border-radius: 10px; /* 边框圆角 */
+	max-width: 200px; /* 最大宽度 */
+	/* border-radius: 20px 20px 20px 20px; */
+}
 		
-		.main-menu ul li {
-		    position: relative;
-		    padding: 10px 15px;
-		}
-		
-		.main-menu ul li a {
-		    color: #4a4a4a;
-		    text-decoration: none;
-		    font-size: 18px;
-		}
-		
-		.main-menu ul li:hover a {
-		    color: #5eb1b9;
-		}
-		/* Dropdown Menu */
-		.main-menu ul li .sub-menu,
-		.main-menu ul li .mega-menu {
-		    display: none;
-		    position: absolute;
-		    background-color: #ffffff;
-		    top: 100%;
-		    left: 0;
-		    padding: 15px 0;
-		    z-index: 1000;
-		}
-		.main-menu ul li:hover .sub-menu,
-		.main-menu ul li:hover .mega-menu {
-		    display: block;
-		}
-		
-		.sub-menu ul {
-		    list-style: none;
-		}
-		
-		.sub-menu li a,
-		.mega-menu li a {
-		    color: #fff;
-		    padding: 10px 20px;
-		    display: block;
-		}
-		
-		.sub-menu li a:hover,
-		.mega-menu li a:hover {
-		    background-color: #555;
-		}
-		
-		.mega-menu {
-		    width: 600px;
-		    display: flex;
-		    padding: 15px;
-		}
-		
-		.mega-menu ul {
-		    margin-right: 20px;
-		}
-		
-		.mega-menu .title {
-		    font-weight: bold;
-		    margin-bottom: 10px;
-		}
-		
-		.header-actions {
-		    display: flex;
-		    align-items: center;
-		}
-		
-		.header-action-btn {
-		    color: #fff;
-		    font-size: 18px;
-		    margin-right: 15px;
-		    text-decoration: none;
-		}
-		
-		.header-action-btn:hover {
-		    color: #f4d03f;
-		}
-		
-		/* Responsive Menu */
-		@media (max-width: 768px) {
-		    .main-menu {
-		        display: none;
-		    }
-		
-		    .header-action-btn-menu {
-		        display: block;
-		    }
-		}
+/* 输入框 */
+.search-box input {
+	flex: 1; /* 使输入框占据剩余空间 */
+	border: none; /* 移除输入框默认边框 */
+	outline: none; /* 移除输入框聚焦时的边框 */
+	padding: 5px; /* 内边距 */
+	font-size: 16px; /* 字体大小 */
+	width:100px;
+	margin: 0 5px;
+}
+.search-style {
+	font-size: 18px;
+	color: #000;
+}
+/* Responsive Menu */
+@media (max-width: 768px) {
+	.main-menu {
+		display: none;
+	}
+
+	.header-action-btn-menu {
+		display: block;
+	}
+	
+	/*小屏幕开关控件*/
+	.oncanvas-mobile-open {
+		display: block;
+	}
+}
+
+/*小屏幕开关控件*/
+.oncanvas-mobile-open {
+	display: none;
+}
+
+/*
+侧边导航菜单栏
+*/
+/* 侧边栏样式 */
+.sidebar-menu {
+    position: fixed;
+    top: 20px;
+    left: -250px; /* 初始隐藏状态 */
+    width: 250px;
+    height: 100%;
+    background-color: #f5fffd;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.3s ease; /* 动画效果 */
+    z-index: 1000;
+    /* padding: 20px; */
+}
+
+.sidebar-menu.active {
+    right: 0; /* 显示侧边栏 */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu ul li {
+    margin: 10px 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .sidebar-menu {
+        display: none; /* 在大屏幕上隐藏侧边栏 */
+    }
+}
