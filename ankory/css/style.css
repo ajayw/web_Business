@@ -20,13 +20,8 @@ header {
 
 .row {
 	display: flex;
-	flex-wrap: wrap;
-}
-
-@media (min-width: 992px) {
-    .container, .container-lg, .container-md, .container-sm {
-        max-width: 960px;
-    }
+	flex-wrap: wrap;/*不换行*/
+	justify-content: space-evenly;/*水平平均分布对齐*/
 }
 
 .align-self-center {
@@ -47,7 +42,7 @@ header {
 .main-menu ul {
 	list-style: none;/* 去掉默认黑点样式 */
 	display: flex;/* 行内布局 */
-	/* padding-inline: 20px; */
+	padding-inline: 0px;
 }
 
 .main-menu ul li {
@@ -152,25 +147,31 @@ header {
 	font-size: 18px;
 	color: #000;
 }
-/* Responsive Menu */
-@media (max-width: 768px) {
-	.main-menu {
-		display: none;
-	}
-
-	.header-action-btn-menu {
-		display: block;
-	}
-	
-	/*小屏幕开关控件*/
-	.oncanvas-mobile-open {
-		display: block;
-	}
-}
 
 /*小屏幕开关控件*/
 .oncanvas-mobile-open {
 	display: none;
+	
+}
+
+/* Responsive Menu */
+@media (max-width: 992px) {
+	.header-mid {
+		display: none;
+	}
+	
+	/*小屏幕开关控件*/
+	.oncanvas-mobile-open {
+		display: flex;
+		justify-content: center;
+	}
+}
+/*小屏时按钮*/
+.bar-btn {
+	background: none; 
+	border: none; 
+	cursor: pointer;
+	height: 25px;
 }
 
 /*
@@ -185,13 +186,15 @@ header {
     height: 100%;
     background-color: #f5fffd;
     box-shadow: -2px 0 5px rgba(0,0,0,0.5);
-    transition: right 0.3s ease; /* 动画效果 */
+	transition: left 1s ease; /* 动画效果 */
     z-index: 1000;
+	/* display: none; */
     /* padding: 20px; */
 }
 
 .sidebar-menu.active {
-    right: 0; /* 显示侧边栏 */
+	/* display: block; */
+    left: 0px; /* 显示侧边栏 */
 }
 
 .sidebar-header {
@@ -213,16 +216,10 @@ header {
     margin: 10px 0;
 }
 
-.close-btn {
+.offcanvas-mobile-close {
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
 }
 
-/* Responsive styles */
-@media (min-width: 768px) {
-    .sidebar-menu {
-        display: none; /* 在大屏幕上隐藏侧边栏 */
-    }
-}
