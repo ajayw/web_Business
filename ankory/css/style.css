@@ -102,8 +102,12 @@ header {
 }
 
 .mega-menu .title {
-	font-weight: bold;
+	/* font-weight: bold; */
 	margin-bottom: 10px;
+}
+
+.dropdown > a:first-child {
+    font-weight: bold;
 }
 
 .header-actions {
@@ -123,6 +127,11 @@ header {
 }
 
 /* 搜索框容器 */
+@media (max-width: 430px) {
+	.col-serch {
+		display: none;
+	}
+}
 .search-box {
 	display: flex; /* 使用 Flexbox 布局 */
 	align-items: center; /* 垂直居中对齐 */
@@ -173,27 +182,53 @@ header {
 	cursor: pointer;
 	height: 25px;
 }
-
+/* 遮罩层样式 */
+.overlay {
+    display: none; /* 初始状态：隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    z-index: 5; /* 层级在侧边栏之下 */
+    transition: opacity 0.6s ease; /* 遮罩层动画 */
+    opacity: 0;
+}
+/* 遮罩层显示状态 */
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
 /*
 侧边导航菜单栏
 */
 /* 侧边栏样式 */
+.offcanvas-mobile-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .sidebar-menu {
     position: fixed;
-    top: 20px;
+    top: 70px;
     left: -250px; /* 初始隐藏状态 */
     width: 250px;
-    height: 100%;
-    background-color: #f5fffd;
+    height: 100vh;
+    background-color: #fff;
     box-shadow: -2px 0 5px rgba(0,0,0,0.5);
 	transition: left 1s ease; /* 动画效果 */
     z-index: 1000;
-	/* display: none; */
-    /* padding: 20px; */
+	overflow-y: auto;
+	border-radius: 0 20px 0 0;
 }
-
+.sidebar-menu-main {
+	margin-top:65px;
+	background-color: #fff;
+}
 .sidebar-menu.active {
-	/* display: block; */
     left: 0px; /* 显示侧边栏 */
 }
 
@@ -203,8 +238,16 @@ header {
     align-items: center;
 }
 
-.sidebar-header h2 {
-    margin: 0;
+.sidebar-header {
+    position: absolute; /* 绝对定位 */
+    top: 10px;             /* 定位到父级的顶部 */
+    right: 0;           /* 定位到父级的右侧 */
+    padding: 10px;      /* 内边距调整 */
+    cursor: pointer;    /* 鼠标悬停时显示为手型，表明是按钮 */
+}
+
+.sidebar-menu-main .menu-item {
+    font-weight: bold;
 }
 
 .sidebar-menu ul {
@@ -216,10 +259,41 @@ header {
     margin: 10px 0;
 }
 
-.offcanvas-mobile-close {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
+.sidebar-menu li a {
+	color: #4a4a4a;
+	text-decoration: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px;
+	border-radius: 4px;
+	/* background-color: #4a4a4a; */
 }
 
+.sidebar-menu li a{
+	padding-right: 25px;
+}
+
+.fa-solid {
+	transition: transform 0.6s ease, opacity 0.6s ease; /* 平滑的旋转和透明度过渡 */
+}
+
+.dropdown.active .fa-solid {
+    transform: rotate(180deg); /* 旋转180度使其变成“减号” */
+    opacity: 1; /* 确保展开时图标完全可见 */
+}
+
+/* 二级菜单样式 */
+.sidebar-menu-main .sub-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out; /* 过渡时间控制缓慢展开 */
+    margin-top: 5px;
+    padding-left: 15px;
+    list-style: none;
+}
+
+/* 展开 */
+.sidebar-menu .dropdown.active .sub-menu {
+	max-height: 500px;
+}
