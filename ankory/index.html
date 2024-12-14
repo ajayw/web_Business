@@ -4,11 +4,15 @@
     <meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="Mioca - Handmade Goods eCommerce HTML Template">
+	<meta name="description" content="Ankory - Handmade Goods eCommerce HTML Template">
 	<title>Mioca - Handmade Goods eCommerce HTML Template</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<!-- <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/png"> -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/carousel.css">
+	<link rel="stylesheet" href="css/poroduct.css">
+	<link rel="stylesheet" href="css/contact.css">
+	<link rel="stylesheet" href="css/aboutUs.css">
 	<script src="js/sidebar.min.js"></script>
 </head>
 <body>
@@ -133,6 +137,387 @@
 			</div>
 		</div>
 	</header>
+	<div class="main">
+		<div class="carousel-container">
+		  <div class="carousel" id="carousel">
+			<!-- 克隆最后一张 -->
+			<div class="carousel-item">
+			  <div class="carousel-content">
+				<div class="carousel-text">
+				  <h2>Modern Living <br> Essentials</h2>
+				  <span class="price">
+					<span class="old"><del>$50.00</del></span>
+					<span class="new">- $35.00</span>
+				  </span>
+				  <a href="shop-left-sidebar.html">Discover More</a>
+				</div>
+				<div class="carousel-image">
+				  <img src="img/slider-3.png" alt="Slider 3">
+				</div>
+			  </div>
+			</div>
+			<!-- 原始内容 -->
+			<div class="carousel-item">
+			  <div class="carousel-content">
+				<div class="carousel-text">
+				  <h2>Best Handmade <br> Goods</h2>
+				  <span class="price">
+					<span class="old"><del>$25.00</del></span>
+					<span class="new">- $18.00</span>
+				  </span>
+				  <a href="shop-left-sidebar.html">View Collection</a>
+				</div>
+				<div class="carousel-image">
+				  <img src="img/slider-1.png" alt="Slider 1">
+				</div>
+			  </div>
+			</div>
+			<div class="carousel-item">
+			  <div class="carousel-content">
+				<div class="carousel-text">
+				  <h2>Exclusive Offers <br> On Decor</h2>
+				  <span class="price">
+					<span class="old"><del>$30.00</del></span>
+					<span class="new">- $22.00</span>
+				  </span>
+				  <a href="shop-left-sidebar.html">Shop Now</a>
+				</div>
+				<div class="carousel-image">
+				  <img src="img/slider-2.png" alt="Slider 2">
+				</div>
+			  </div>
+			</div>
+			<div class="carousel-item">
+			  <div class="carousel-content">
+				<div class="carousel-text">
+				  <h2>Modern Living <br> Essentials</h2>
+				  <span class="price">
+					<span class="old"><del>$50.00</del></span>
+					<span class="new">- $35.00</span>
+				  </span>
+				  <a href="shop-left-sidebar.html">Discover More</a>
+				</div>
+				<div class="carousel-image">
+				  <img src="img/slider-3.png" alt="Slider 3">
+				</div>
+			  </div>
+			</div>
+			<!-- 克隆第一张 -->
+			<div class="carousel-item">
+			  <div class="carousel-content">
+				<div class="carousel-text">
+				  <h2>Best Handmade <br> Goods</h2>
+				  <span class="price">
+					<span class="old"><del>$25.00</del></span>
+					<span class="new">- $18.00</span>
+				  </span>
+				  <a href="shop-left-sidebar.html">View Collection</a>
+				</div>
+				<div class="carousel-image">
+				  <img src="img/slider-1.png" alt="Slider 1">
+				</div>
+			  </div>
+			</div>
+		  </div>
 		
+		  <!-- 翻页控件 -->
+		  <div class="controls">
+			<button class="control-btn" id="prevBtn">&#8249;</button>
+			<button class="control-btn" id="nextBtn">&#8250;</button>
+		  </div>
+		</div>
+	</div>
+	<div class="product">
+		<div class="section-title mb-60px">
+			<h1 class="title">Popular Categories</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod/br incididunt ut labore et dolore magna aliqua. </p>
+		</div>
+		<!-- 产品分类 -->
+		<ul class="product-classify">
+			<li data-target="pottery">
+			  <a href="javascript:void(0)"><img src="img/classify-icon1.png" alt=""><span>Pottery</span></a>
+			</li>
+			<li data-target="fabric">
+			  <a href="javascript:void(0)"><img src="img/classify-icon2.png" alt=""><span>Fabric</span></a>
+			</li>
+			<li data-target="paintings">
+			  <a href="javascript:void(0)"><img src="img/classify-icon3.png" alt=""><span>Paintings</span></a>
+			</li>
+			<li data-target="sculptures">
+			  <a href="javascript:void(0)"><img src="img/classify-icon4.png" alt=""><span>Sculptures</span></a>
+			</li>
+		</ul>
+	  
+	  <!-- 产品展示 -->
+	  <div class="product-show">
+	    <div class="product-content active" id="pottery">
+	      <div class="product-item">
+	        <img src="img/list1.jpg" alt="Pottery 1">
+	        <p>Pottery 1</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list2.jpg" alt="Pottery 2">
+	        <p>Pottery 2</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list3.jpg" alt="Pottery 3">
+	        <p>Pottery 3</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list4.jpg" alt="Pottery 4">
+	        <p>Pottery 4</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list5.jpg" alt="Pottery 5">
+	        <p>Pottery 5</p>
+	      </div>
+		  <div class="product-item">
+		    <img src="img/list6.jpg" alt="Pottery 5">
+		    <p>Pottery 6</p>
+		  </div>
+		  <div class="product-item">
+		    <img src="img/list7.jpg" alt="Pottery 5">
+		    <p>Pottery 7</p>
+		  </div>
+		  <div class="product-item">
+		    <img src="img/list8.jpg" alt="Pottery 5">
+		    <p>Pottery 8</p>
+		  </div>
+		  <div class="product-item">
+		    <img src="img/list9.jpg" alt="Pottery 5">
+		    <p>Pottery 9</p>
+		  </div>
+	    </div>
+	    <div class="product-content" id="fabric">
+	      <div class="product-item">
+	        <img src="img/list9.jpg" alt="Pottery 1">
+	        <p>Pottery 1</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list8.jpg" alt="Pottery 2">
+	        <p>Pottery 2</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list7.jpg" alt="Pottery 3">
+	        <p>Pottery 3</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list6.jpg" alt="Pottery 4">
+	        <p>Pottery 4</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list5.jpg" alt="Pottery 5">
+	        <p>Pottery 5</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list4.jpg" alt="Pottery 5">
+	        <p>Pottery 6</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list3.jpg" alt="Pottery 5">
+	        <p>Pottery 7</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list2.jpg" alt="Pottery 5">
+	        <p>Pottery 8</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list1.jpg" alt="Pottery 5">
+	        <p>Pottery 9</p>
+	      </div>
+	    </div>
+	    <div class="product-content" id="paintings">
+	      <div class="product-item">
+	        <img src="img/list5.jpg" alt="Pottery 1">
+	        <p>Pottery 1</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list2.jpg" alt="Pottery 2">
+	        <p>Pottery 2</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list4.jpg" alt="Pottery 3">
+	        <p>Pottery 3</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list3.jpg" alt="Pottery 4">
+	        <p>Pottery 4</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list1.jpg" alt="Pottery 5">
+	        <p>Pottery 5</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list9.jpg" alt="Pottery 5">
+	        <p>Pottery 6</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list8.jpg" alt="Pottery 5">
+	        <p>Pottery 7</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list6.jpg" alt="Pottery 5">
+	        <p>Pottery 8</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list7.jpg" alt="Pottery 5">
+	        <p>Pottery 9</p>
+	      </div>
+	    </div>
+	    <div class="product-content" id="sculptures">
+	      <div class="product-item">
+	        <img src="img/list2.jpg" alt="Pottery 1">
+	        <p>Pottery 1</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list4.jpg" alt="Pottery 2">
+	        <p>Pottery 2</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list8.jpg" alt="Pottery 3">
+	        <p>Pottery 3</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list7.jpg" alt="Pottery 4">
+	        <p>Pottery 4</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list1.jpg" alt="Pottery 5">
+	        <p>Pottery 5</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list3.jpg" alt="Pottery 5">
+	        <p>Pottery 6</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list9.jpg" alt="Pottery 5">
+	        <p>Pottery 7</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list6.jpg" alt="Pottery 5">
+	        <p>Pottery 8</p>
+	      </div>
+	      <div class="product-item">
+	        <img src="img/list5.jpg" alt="Pottery 5">
+	        <p>Pottery 9</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="aboutUs">
+		<h1>About Us</h1>
+		<p class="slogan">--安可瑞：值得信赖的中国商品代理伙伴</p>
+		
+		  <!-- 左图右文布局 -->
+		<div class="content-section">
+			<div class="image-container">
+			  <img src="img/goods2.jpg" alt="安可瑞专业团队">
+			</div>
+			<div class="text-container">
+			<p>安可瑞是一家专注于中国商品代理服务的专业化公司，致力于将中国优质商品引荐至海外市场，为东南亚、北美、欧洲等国家和地区的代理商提供一站式解决方案。凭借强大的供应链资源、丰富的行业经验以及优质的服务，安可瑞成为众多海外代理商实现财富梦想的可靠合作伙伴。</p>
+			 <p>我们拥有广泛而稳定的商品供应网络，与众多中国优质制造商和品牌方建立了长期合作关系。通过严格的商品筛选与质量把控，安可瑞确保每一件推荐给代理商的商品都具有高性价比和市场竞争力。</p>
+			 </div>
+		</div>
+		
+		<!-- 右图左文布局 -->
+		<div class="content-section reverse-layout">
+			<div class="text-container">
+				<p>安可瑞的团队由一群充满热情、专业知识扎实的中国贸易专家组成。他们不仅熟悉跨境贸易的各项流程，还能够提供从市场调研、物流运输到售后服务的全方位支持。无论是新加入的代理商，还是已在行业中深耕的资深合作伙伴，我们都以真诚、可靠和高效的服务态度，为每位客户提供贴心的指导与帮助。</p>
+				<p>安可瑞希望成为全球最值得信赖的商品代理服务提供商，通过商品与服务的不断优化，持续为客户创造价值。我们不仅仅是商品的供应者，更是海外代理商的财富助推器。未来，安可瑞将继续深耕全球市场，加强技术创新与服务升级，为合作伙伴创造更多机会，携手构建互利共赢的商业生态圈。</p>
+				<p>安可瑞秉持“服务全球代理商，助力共赢未来”的企业使命，旨在将中国制造的优质商品与海外代理商的市场需求紧密连接。我们深信，通过可靠的商品供应与贴心的服务，能够为代理商创造持续收益，同时为海外消费者带来物美价廉的产品体验。选择安可瑞，就是选择一个值得信赖的合作伙伴。未来，我们将继续秉持“服务全球代理商，助力共赢未来”的理念，用更优质的商品、更完善的服务和更高效的团队，帮助更多代理商抓住商机。</p>
+				<p>安可瑞：将中国优质商品带向世界，助力每一位代理商实现成功之梦！</p>
+			</div>
+			<div class="image-container">
+				<img src="img/goods5.jpg" alt="安可瑞高效物流体系">
+			</div>
+			<div></div>
+		</div>
+	</div>
+	<div class="contactUs">
+		<h1>Contact Us</h1>
+		<div class="contact-area">
+			<div class="contact-info">
+				<h2 class="sub-title">Get In Touch</h2>
+				<p class="heading">Visit One Of Our Shop
+					Contact Us Now</p>
+				<div class="contact-style">
+					<div class="single-contact">
+						<div class="icon-box">
+							<i class="fa-solid fa-phone fa-2xl" style="color: #f5fffd;"></i>
+						</div>
+						<div class="info-box">
+							<h5 class="title">Phone:</h5>
+							<p><a href="javascript:void(0)">+86 13536396854</a></p>
+						</div>
+					</div>
+					<div class="single-contact">
+						<div class="icon-box">
+							<i class="fa-solid fa-envelope fa-2xl" style="color: #f5fffd;"></i>
+						</div>
+						<div class="info-box">
+							<h5 class="title">Email:</h5>
+							<p><a href="mailto:demo@example.com" >ajay_w@qq.com</a></p>
+						</div>
+					</div>
+					<div class="single-contact">
+						<div class="icon-box">
+							<i class="fa-solid fa-location-dot fa-2xl" style="color: #f5fffd;"></i>
+						</div>
+						<div class="info-box">
+							<h5 class="title">Address:</h5>
+							<p>Juyin Science Park, Shenzhen City, Guangdong Province, China</p>
+						</div>
+					</div>
+					
+					<ul class="social">
+						<li class="m-0">
+							<a href="javascript:void(0)"><i class="fa-brands fa-facebook fa-xl" style="color: #f5fffd;"></i></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><i class="fa-brands fa-x fa-xl" style="color: #f5fffd;"></i></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><i class="fa-brands fa-tiktok fa-xl" style="color: #f5fffd;"></i></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><i class="fa-brands fa-youtube fa-xl" style="color: #f5fffd;"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="contact-form">
+				<div class="contact-title">
+					<h2 class="title" data-aos="fade-up" data-aos-delay="200">Leave a Message</h2>
+					<p>We can provide more information about our products, please send us a message. </p>
+				</div>
+				<form class="contact-form-style" id="contact-form" action="http://whizthemes.com/nazmul/php/mail.php" method="post">
+				  <div class="row">
+					<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+					  <input name="name" placeholder="Name*" type="text">
+					</div>
+					<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+					  <input name="email" placeholder="Email*" type="email">
+					</div>
+					<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+					  <input name="country" placeholder="Country*" type="text">
+					</div>
+					<div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+					  <textarea name="message" placeholder="Your Message*"></textarea>
+					  <button class="btn btn-primary mt-4" data-aos="fade-up" data-aos-delay="200" type="submit">Send Message</button>
+					</div>
+				  </div>
+				</form>
+		
+				<p class="form-messege"></p>
+			</div>
+		</div>
+	</div>
+	<footer>
+	    <div class="container">
+	        <p>&copy; 2024 My Website. All rights reserved.</p>
+	    </div>
+	</footer>
+	<script src="js/carousel.js"></script>
+	<script src="js/product.js"></script>
 </body>
 </html>

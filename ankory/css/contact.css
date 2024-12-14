@@ -1,0 +1,207 @@
+body{
+	margin: 0;
+}
+.contactUs {
+	margin: 40px 0;
+}
+.contactUs h1{
+	text-align: center;
+	color: #424242;
+}
+.contact-area {
+  display: flex;
+  flex-wrap: wrap; /* 允许小屏幕换行 */
+  /* gap: 20px;       控制左右间距 */
+   max-width: 80%;
+   margin: 20px auto;
+}
+
+.contact-area .contact-info {
+  flex: 0 0 40%; /* 左侧宽度40% */
+  max-width: 40%;
+}
+
+.contact-area .contact-form {
+  flex: 0 0 50%; /* 右侧宽度60% */
+  max-width: 50%;
+}
+
+@media (max-width: 1080px) {
+  .contact-area {
+    flex-direction: column; /* 小屏幕上下堆叠 */
+  }
+
+  .contact-area .contact-info,
+  .contact-area .contact-form {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+.contact-area .contact-info,.contact-form {
+	margin:10px 2.5%;
+}
+.contact-info h2,.contact-title h2 {
+	color: #5eb1b9;
+	font-weight: bold;
+}
+.contact-style {
+	max-width: 800px;
+	margin: 0 auto; /* 居中 */
+	padding: 20px;
+	background: #f9f9f9; /* 浅灰色背景 */
+	border: 1px solid #e0e0e0;
+	border-radius: 8px; /* 圆角 */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+.single-contact {
+  display: flex; /* 使用 Flexbox 布局 */
+  /* justify-content: center; /* 水平方向居中 */ 
+  align-items: center; /* 垂直方向居中 */
+  gap: 10px; /* 控制图标与文本之间的间距 */
+}
+
+.icon-box {
+	display: flex; /* 使用 Flexbox */
+	justify-content: center; /* 水平方向居中 */
+	align-items: center; /* 垂直方向居中 */
+	background-color: #424242; /* 可选：测试背景 */
+	width: 50px;
+	height: 50px;
+	flex-shrink: 0; /* 确保图标不缩小 */
+}
+
+.info-box {
+  text-align: left; /* 保持文本左对齐 */
+  font-family: Arial, sans-serif; /* 可选：设置字体 */
+}
+
+.single-contact:hover .icon-box{
+	background-color: #5eb1b9;
+}
+
+.info-box h5.title {
+  margin-bottom: 4px; /* 调整 h5 底部间距，缩短与 p 标签的距离 */
+  font-size: 16px; /* 可选：调整字体大小 */
+}
+
+.info-box p {
+  margin-top: 0; /* 移除 p 标签的顶部外边距 */
+  font-size: 16px; /* 可选：调整字体大小 */
+  color: #333; /* 可选：设置文本颜色 */
+}
+
+.info-box p a{
+	text-decoration: none;
+	color: #424242;
+}
+
+	
+/* 父级容器 ul 设置为 flex 布局 */
+ul.social {
+  display: flex;
+  justify-content: left; /* 左 */
+  list-style: none; /* 移除默认的 li 样式 */
+  padding: 0; /* 去除内边距 */
+  margin: 20px 0; /* 去除外边距 */
+  /* width: 40%; */
+}
+
+/* 每个 li 居中对齐 */
+ul.social li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #424242;
+  margin-right: 10px;
+}
+ul.social li:hover {
+	background-color: #5eb1b9;
+}
+	
+
+/* 基础样式设置 */
+.contact-form-style {
+  max-width: 800px;
+  margin: 0 auto; /* 居中 */
+  padding: 20px;
+  background: #f9f9f9; /* 浅灰色背景 */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+/* 输入框和文本区域样式 */
+.contact-form-style input,
+.contact-form-style textarea {
+  width: 100%; /* 占满父级宽度 */
+  padding: 12px 15px;
+  margin-bottom: 20px; /* 间距 */
+  border: 1px solid #ccc; /* 边框 */
+  border-radius: 4px; /* 圆角 */
+  font-size: 16px; /* 字体大小 */
+  font-family: Arial, sans-serif; /* 字体 */
+  box-sizing: border-box; /* 包括内边距 */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 输入框聚焦时的样式 */
+.contact-form-style input:focus,
+.contact-form-style textarea:focus {
+  border-color: #5eb1b9; /* 高亮边框颜色 */
+  box-shadow: 0 0 6px rgba(94, 177, 185, 0.5); /* 高亮阴影 */
+  outline: none;
+}
+
+/* 按钮样式 */
+.contact-form-style .btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #5eb1b9; /* 按钮背景色 */
+  border: none;
+  border-radius: 4px; /* 圆角 */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* 按钮悬停效果 */
+.contact-form-style .btn:hover {
+  background-color: #4a949e; /* 悬停颜色 */
+  transform: scale(1.05); /* 放大效果 */
+}
+
+/* 行布局设置 */
+.contact-form-style .row {
+  display: flex;
+  flex-wrap: wrap; /* 自动换行 */
+  gap: 20px; /* 水平和垂直间距 */
+}
+
+/* 单独控制列样式 */
+.contact-form-style .col-lg-6 {
+  flex: 0 0 48%; /* 每行占50%宽度，留有间隙 */
+}
+
+.contact-form-style .col-lg-12 {
+  flex: 0 0 100%; /* 全行宽度 */
+}
+
+/* 文本区域样式调整 */
+.contact-form-style textarea {
+  min-height: 120px; /* 高度 */
+  resize: vertical; /* 可调整高度 */
+}
+
+/* 占位符样式 */
+.contact-form-style input::placeholder,
+.contact-form-style textarea::placeholder {
+  color: #aaa;
+  font-style: italic; /* 斜体占位符 */
+}
+

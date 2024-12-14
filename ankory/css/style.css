@@ -39,9 +39,12 @@ header {
 	-ms-flex-pack: center;
 	justify-content: center;
 }
+.main-menu >ul:first-child {
+	display: flex;/* 行内布局 */
+	
+}
 .main-menu ul {
 	list-style: none;/* 去掉默认黑点样式 */
-	display: flex;/* 行内布局 */
 	padding-inline: 0px;
 }
 
@@ -58,7 +61,7 @@ header {
 .main-menu .dropdown>a:first-child,.about-bold a,.contact-bold a{
 	font-weight: bold;
 }
-.main-menu ul li:hover a {
+.main-menu ul li:hover > a:first-child {
 	color: #5eb1b9;
 }
 /* Dropdown Menu */
@@ -70,28 +73,36 @@ header {
 	left: 0;
 	/* padding: 15px 0; */
 	z-index: 1000;
-	width: 300px;
+	width: 240px;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* 添加阴影 */
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.6s ease-in-out; /* 过渡时间控制缓慢展开 */
+	transition: max-height 0.1s ease-out; /* 过渡时间控制缓慢展开 */
 }
 
-.main-menu ul li:hover .sub-menu {
+.main-menu ul li:hover .sub-menu{
 	max-height: 400px;
 }
-.sub-menu ul {
+.main-menu ul li:hover .sub-menu>li>a{
+	padding:14px 10px;
+}
+.sub-menu {
 	list-style: none;
 }
 
+.main-menu ul li .sub-menu li{
+	padding:0px;
+	transition: padding 0.3s ease-in-out;
+}
 .sub-menu li a {
-	color: #fff;
-	padding: 10px 20px;
+	padding: 10px;
 	display: block;
+	transition: padding 0.3s ease-in-out;
 }
 
-.sub-menu li a:hover {
-	background-color: #555;
+.sub-menu li:hover a {
+	color: #5eb1b9;
+	padding-left: 16px;
 }
 
 .dropdown > a:first-child {
@@ -211,7 +222,14 @@ header {
     z-index: 1000;
 	overflow-y: auto;
 	border-radius: 0 20px 0 0;
+	overflow-y: scroll; /* 启用垂直滚动 */
+	scrollbar-width: none; /* 隐藏滚动条 (适用于 Firefox) */
 }
+	
+.sidebar-menu::-webkit-scrollbar {
+	display: none; /* 隐藏滚动条 (适用于 Webkit 浏览器，如 Chrome 和 Edge) */
+}
+
 .sidebar-menu-main {
 	margin-top:65px;
 	background-color: #fff;

@@ -1,0 +1,71 @@
+.aboutUs {
+	margin: 40px auto 20px;
+	width: 80%;
+}
+.aboutUs h1 {
+  text-align: center;
+  color: #424242;
+  /* display: block; */
+}
+.aboutUs p.slogan {
+  margin-right: 10%;
+  text-align: right;
+  color: #424242;
+  margin-bottom: 0px;
+}
+/* 图文布局样式 */
+.content-section {
+  display: flex;
+  align-items: top;
+  margin-bottom: 20px; /* 分隔内容块 */
+}
+
+.image-container {
+  flex: 1; /* 图片占宽度的50% */
+  max-width: 50%; /* 确保图片宽度占一半 */
+  text-align: center; /* 图片居中显示 */
+  padding: 0 10px;
+}
+
+.image-container img {
+  width: 100%; /* 图片自适应容器宽度 */
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 图片阴影效果 */
+  margin-top: 24px;
+}
+
+.text-container {
+  flex: 1; /* 文字占宽度的50% */
+  max-width: 50%; /* 确保文字宽度占一半 */
+  padding: 0 10px; /* 调整文字和图片的间距 */
+  /* margin: 20px; */
+}
+
+.text-container p {
+  font-size: 16px; /* 字体大小 */
+  line-height: 1.8; /* 行高 */
+  color: #333; /* 文字颜色 */
+  margin-bottom: 15px; /* 段落间距 */
+}
+
+/* 响应式设计：适配小屏幕 */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column; /* 小屏幕下垂直排列 */
+  }
+  .image-container,
+  .text-container {
+    max-width: 100%; /* 宽度占满 */
+  }
+  .image-container {
+    margin-bottom: 20px; /* 图片和文字间距 */
+  }
+  .text-container {
+    padding: 0; /* 去除间距 */
+  }
+}
+
+/* 反转布局：右图左文 */
+/* .reverse-layout {
+  flex-direction: row-reverse; 
+} */
