@@ -49,7 +49,7 @@
 }
 
 /* 响应式设计：适配小屏幕 */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .content-section {
     flex-direction: column; /* 小屏幕下垂直排列 */
   }
@@ -69,3 +69,7 @@
 /* .reverse-layout {
   flex-direction: row-reverse; 
 } */
+footer a {
+    text-decoration: none;
+    color: inherit;
+}

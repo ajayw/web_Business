@@ -58,7 +58,7 @@ header {
 	text-decoration: none;
 	font-size: 18px;
 }
-.main-menu .dropdown>a:first-child,.about-bold a,.contact-bold a{
+.main-menu .home-bold a,.about-bold a,.contact-bold a{
 	font-weight: bold;
 }
 .main-menu ul li:hover > a:first-child {
@@ -302,4 +302,13 @@ header {
 /* 展开 */
 .sidebar-menu .dropdown.active .sub-menu {
 	max-height: 500px;
+}
+
+.foot_container {
+	text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
 }

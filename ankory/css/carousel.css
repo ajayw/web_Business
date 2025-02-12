@@ -127,3 +127,8 @@
     .control-btn:hover {
       background-color: rgba(94, 177, 185, 0.8);
     }
+	
+	footer a {
+	    text-decoration: none;
+	    color: inherit;
+	}

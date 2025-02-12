@@ -181,6 +181,7 @@ ul.social li:hover {
   display: flex;
   flex-wrap: wrap; /* 自动换行 */
   gap: 20px; /* 水平和垂直间距 */
+  justify-content: left;
 }
 
 /* 单独控制列样式 */
@@ -205,3 +206,7 @@ ul.social li:hover {
   font-style: italic; /* 斜体占位符 */
 }
 
+footer a {
+    text-decoration: none;
+    color: inherit;
+}

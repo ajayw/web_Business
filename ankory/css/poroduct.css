@@ -100,3 +100,7 @@
 .product-item p {
   margin-top: 10px;
 }
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
